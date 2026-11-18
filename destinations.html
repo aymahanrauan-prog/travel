@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Top 10 destinations in Kazakhstan with search, filters and live weather">
+    <title>Destinations | Kazakhstan Travel</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8F%94%EF%B8%8F%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/theme.js"></script>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <header class="site-header">
+        <div class="container">
+            <div class="header-top">
+                <a class="brand" href="index.html"><i class="bi bi-compass" aria-hidden="true"></i> Kazakhstan <span>Travel</span></a>
+                <div class="header-actions">
+                    <button type="button" id="theme-toggle" class="btn-outline-brand" aria-pressed="false">Night</button>
+                    <div id="auth-area">
+                        <a href="login.html" class="auth-link">Log in</a>
+                        <a href="register.html" class="btn-brand">Sign up</a>
+                    </div>
+                    <button type="button" class="menu-toggle d-lg-none" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">&#9776;</button>
+                </div>
+            </div>
+            <nav class="navbar navbar-expand-lg p-0" aria-label="Main navigation">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav main-menu">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="destinations.html" aria-current="page">Destinations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tours.html">Tours</a></li>
+                    <li class="nav-item"><a class="nav-link" href="culture.html">Culture</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contacts</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow-1">
+        <div class="container">
+            <header class="page-header">
+                <h1 class="section-heading">Destinations</h1>
+                <p class="section-intro mb-0">Ten places that show the many faces of Kazakhstan. Search by name or filter by region, and save your favorites with the heart.</p>
+            </header>
+
+            <section class="mb-5" aria-labelledby="attractions-title">
+                <h2 id="attractions-title" class="section-heading mb-3">Top 10 attractions</h2>
+                <form id="search-form" class="row g-2 align-items-center mb-3" role="search" novalidate>
+                    <div class="col-12 col-md">
+                        <label for="search-input" class="visually-hidden">Search attractions</label>
+                        <input type="text" id="search-input" class="form-control form-control-lg" placeholder="Search attractions, e.g. Charyn, Astana" autocomplete="off">
+                    </div>
+                    <div class="col-auto">
+                        <button type="button" id="clear-search" class="btn btn-outline-primary btn-lg">Clear</button>
+                    </div>
+                </form>
+                <div class="d-flex flex-wrap gap-2 mb-3" role="group" aria-label="Filter by region">
+                    <button type="button" class="region-chip active" data-region="all" aria-pressed="true">All</button>
+                        <button type="button" class="region-chip" data-region="Almaty" aria-pressed="false">Almaty</button>
+                        <button type="button" class="region-chip" data-region="Astana &amp; North" aria-pressed="false">Astana &amp; North</button>
+                        <button type="button" class="region-chip" data-region="South" aria-pressed="false">South</button>
+                        <button type="button" class="region-chip" data-region="West" aria-pressed="false">West</button>
+                        <button type="button" class="region-chip" data-region="East" aria-pressed="false">East</button>
+                </div>
+                <p class="small text-muted mb-3"><span id="results-count" aria-live="polite">10 places found</span>
+                    <span id="restored-note" hidden> &middot; Your last search was restored.</span></p>
+                <div class="row g-4" id="places-grid">
+                    <div class="col-12 col-md-6 col-lg-4 place-item" data-region="Almaty">
+                        <article class="card h-100 border-0 shadow-sm place-card">
+                            <div class="place-media">
+                                <img src="images/charyn.jpg" class="card-img-top card-fixed-image" alt="Charyn Canyon" loading="lazy">
+                                <button type="button" class="fav-btn" data-fav-type="places" data-fav-id="place-charyn" data-fav-title="Charyn Canyon" data-fav-image="images/charyn.jpg" data-fav-href="destinations.html" aria-pressed="false" aria-label="Save Charyn Canyon"><i class="bi bi-heart" aria-hidden="true"></i></button>
+                            </div>
+                            <div class="card-body">
+                                <span class="place-region">Almaty Region</span>
+                                <h3 class="h5 card-title">Charyn Canyon</h3>
+                                <p class="card-text text-secondary">A unique natural monument featuring dramatic sedimentary rock formations and the famous Valley of Castles.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 place-item" data-region="Almaty">
+                        <article class="card h-100 border-0 shadow-sm place-card">
+                            <div class="place-media">
+                                <img src="images/kolsai.avif" class="card-img-top card-fixed-image" alt="Kolsai &amp; Kaindy Lakes" loading="lazy">
+                                <button type="button" class="fav-btn" data-fav-type="places" data-fav-id="place-kolsai" data-fav-title="Kolsai &amp; Kaindy Lakes" data-fav-image="images/kolsai.avif" data-fav-href="destinations.html" aria-pressed="false" aria-label="Save Kolsai &amp; Kaindy Lakes"><i class="bi bi-heart" aria-hidden="true"></i></button>
+                            </div>
+                            <div class="card-body">
+                                <span class="place-region">Almaty Region</span>
+                                <h3 class="h5 card-title">Kolsai &amp; Kaindy Lakes</h3>
+                                <p class="card-text text-secondary">Mountain lakes with turquoise waters, Tian Shan spruce forests and the famous submerged forest of Kaindy.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 place-item" data-region="Astana &amp; North">
+                        <article class="card h-100 border-0 shadow-sm place-card">
+                            <div class="place-media">
+                                <img src="images/baiterek.avif" class="card-img-top card-fixed-image" alt="Baiterek Tower" loading="lazy">
+                                <button type="button" class="fav-btn" data-fav-type="places" data-fav-id="place-baiterek" data-fav-title="Baiterek Tower" data-fav-image="images/baiterek.avif" data-fav-href="destinations.html" aria-pressed="false" aria-label="Save Baiterek Tower"><i class="bi bi-heart" aria-hidden="true"></i></button>
+                            </div>
+                            <div class="card-body">
+                                <span class="place-region">Astana</span>
+                                <h3 class="h5 card-title">Baiterek Tower</h3>
+                                <p class="card-text text-secondary">An iconic symbol of the capital with an observation deck inside a golden sphere.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 place-item" data-region="South">
+                        <article class="card h-100 border-0 shadow-sm place-card">
+                            <div class="place-media">
+                                <img src="images/mausoleum.avif" class="card-img-top card-fixed-image" alt="Mausoleum of Khoja Ahmed Yasawi" loading="lazy">
+                                <button type="button" class="fav-btn" data-fav-type="places" data-fav-id="place-yasawi" data-fav-title="Mausoleum of Khoja Ahmed Yasawi" data-fav-image="images/mausoleum.avif" data-fav-href="destinations.html" aria-pressed="false" aria-label="Save Mausoleum of Khoja Ahmed Yasawi"><i class="bi bi-heart" aria-hidden="true"></i></button>
+                            </div>
+                            <div class="card-body">
+                                <span class="place-region">Turkistan</span>
+                                <h3 class="h5 card-title">Mausoleum of Khoja Ahmed Yasawi</h3>
+                                <p class="card-text text-secondary">A major historical and spiritual monument in Turkistan and a UNESCO World Heritage Site.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 place-item" data-region="West">
+                        <article class="card h-100 border-0 shadow-sm place-card">
+                            <div class="place-media">
+                                <img src="images/bozzhyra.avif" class="card-img-top card-fixed-image" alt="Bozzhyra Tract" loading="lazy">
+                                <button type="button" class="fav-btn" data-fav-type="places" data-fav-id="place-bozzhyra" data-fav-title="Bozzhyra Tract" data-fav-image="images/bozzhyra.avif" data-fav-href="destinations.html" aria-pressed="false" aria-label="Save Bozzhyra Tract"><i class="bi bi-heart" aria-hidden="true"></i></button>
+                            </div>
+                            <div class="card-body">
+                                <span class="place-region">Mangystau</span>
+                                <h3 class="h5 card-title">Bozzhyra Tract</h3>
+                                <p class="card-text text-secondary">A striking landscape of white chalk cliffs and rock formations on the Ustyurt Plateau.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 place-item" data-region="Almaty">
+                        <article class="card h-100 border-0 shadow-sm place-card">
+                            <div class="place-media">
+                                <img src="images/medeu.avif" class="card-img-top card-fixed-image" alt="Medeu &amp; Shymbulak" loading="lazy">
+                                <button type="button" class="fav-btn" data-fav-type="places" data-fav-id="place-medeu" data-fav-title="Medeu &amp; Shymbulak" data-fav-image="images/medeu.avif" data-fav-href="destinations.html" aria-pressed="false" aria-label="Save Medeu &amp; Shymbulak"><i class="bi bi-heart" aria-hidden="true"></i></button>
+                            </div>
+                            <div class="card-body">
+                                <span class="place-region">Almaty</span>
+                                <h3 class="h5 card-title">Medeu &amp; Shymbulak</h3>
+                                <p class="card-text text-secondary">A mountain recreation area near Almaty with the Medeu skating rink and Shymbulak ski resort.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 place-item" data-region="Almaty">
+                        <article class="card h-100 border-0 shadow-sm place-card">
+                            <div class="place-media">
+                                <img src="images/altyn-emel.avif" class="card-img-top card-fixed-image" alt="Altyn-Emel National Park" loading="lazy">
+                                <button type="button" class="fav-btn" data-fav-type="places" data-fav-id="place-altyn-emel" data-fav-title="Altyn-Emel National Park" data-fav-image="images/altyn-emel.avif" data-fav-href="destinations.html" aria-pressed="false" aria-label="Save Altyn-Emel National Park"><i class="bi bi-heart" aria-hidden="true"></i></button>
+                            </div>
+                            <div class="card-body">
+                                <span class="place-region">Almaty Region</span>
+                                <h3 class="h5 card-title">Altyn-Emel National Park</h3>
+                                <p class="card-text text-secondary">Known for the Singing Dune and unusual landscapes of the Katutau and Aktau mountains.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 place-item" data-region="Astana &amp; North">
+                        <article class="card h-100 border-0 shadow-sm place-card">
+                            <div class="place-media">
+                                <img src="images/burabay.avif" class="card-img-top card-fixed-image" alt="Burabay National Park" loading="lazy">
+                                <button type="button" class="fav-btn" data-fav-type="places" data-fav-id="place-burabay" data-fav-title="Burabay National Park" data-fav-image="images/burabay.avif" data-fav-href="destinations.html" aria-pressed="false" aria-label="Save Burabay National Park"><i class="bi bi-heart" aria-hidden="true"></i></button>
+                            </div>
+                            <div class="card-body">
+                                <span class="place-region">Akmola Region</span>
+                                <h3 class="h5 card-title">Burabay National Park</h3>
+                                <p class="card-text text-secondary">A scenic region of pine forests, lakes and granite mountains in northern Kazakhstan.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 place-item" data-region="East">
+                        <article class="card h-100 border-0 shadow-sm place-card">
+                            <div class="place-media">
+                                <img src="images/katon-karagay.jpg" class="card-img-top card-fixed-image" alt="Katon-Karagay &amp; Mount Belukha" loading="lazy">
+                                <button type="button" class="fav-btn" data-fav-type="places" data-fav-id="place-katon" data-fav-title="Katon-Karagay &amp; Mount Belukha" data-fav-image="images/katon-karagay.jpg" data-fav-href="destinations.html" aria-pressed="false" aria-label="Save Katon-Karagay &amp; Mount Belukha"><i class="bi bi-heart" aria-hidden="true"></i></button>
+                            </div>
+                            <div class="card-body">
+                                <span class="place-region">East Kazakhstan</span>
+                                <h3 class="h5 card-title">Katon-Karagay &amp; Mount Belukha</h3>
+                                <p class="card-text text-secondary">A large protected area in the Altai region with taiga, alpine meadows and mountain landscapes.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4 place-item" data-region="South">
+                        <article class="card h-100 border-0 shadow-sm place-card">
+                            <div class="place-media">
+                                <img src="images/baikonur.avif" class="card-img-top card-fixed-image" alt="Baikonur Cosmodrome" loading="lazy">
+                                <button type="button" class="fav-btn" data-fav-type="places" data-fav-id="place-baikonur" data-fav-title="Baikonur Cosmodrome" data-fav-image="images/baikonur.avif" data-fav-href="destinations.html" aria-pressed="false" aria-label="Save Baikonur Cosmodrome"><i class="bi bi-heart" aria-hidden="true"></i></button>
+                            </div>
+                            <div class="card-body">
+                                <span class="place-region">Kyzylorda Region</span>
+                                <h3 class="h5 card-title">Baikonur Cosmodrome</h3>
+                                <p class="card-text text-secondary">A historic space-launch facility associated with major milestones in the history of space exploration.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div id="no-results" class="alert alert-warning mt-3" role="status" hidden>No places match your search. Try another word or press Clear.</div>
+            </section>
+
+            <section class="hot-offer rounded-4 overflow-hidden mb-5" aria-labelledby="hot-offer-title">
+                <div class="hot-offer-overlay p-3 p-md-5">
+                    <span class="badge text-bg-warning mb-3">HOT OFFER</span>
+                    <div class="glass-card p-3 p-md-4">
+                        <p class="mb-2"><i class="bi bi-clock" aria-hidden="true"></i> 10 hours</p>
+                        <h2 id="hot-offer-title" class="h3">Excursion to Charyn Canyon</h2>
+                        <p>An unforgettable journey to one of Kazakhstan's most distinctive natural monuments, formed over millions of years.</p>
+                        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center gap-3">
+                            <div class="fs-4 fw-bold"><s class="fs-6 opacity-75">$330</s> $294</div>
+                            <a href="contact.html?tour=tour-3" class="btn-brand">Book now</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-5" aria-labelledby="weather-title">
+                <div class="panel">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-12 col-md-5">
+                            <h2 id="weather-title" class="h4">Check the weather before you go</h2>
+                            <p class="text-secondary small">Live data from the Open-Meteo service.</p>
+                            <label for="weather-city" class="form-label small fw-semibold">City</label>
+                            <select id="weather-city" class="form-select"><option value="astana">Astana</option><option value="almaty">Almaty</option><option value="turkistan">Turkistan</option><option value="aktau">Aktau</option><option value="burabay">Burabay</option></select>
+                        </div>
+                        <div class="col-12 col-md-7">
+                            <div id="weather-result" aria-live="polite"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-12 col-lg-4">
+                    <a class="brand" href="index.html"><i class="bi bi-compass" aria-hidden="true"></i> Kazakhstan <span>Travel</span></a>
+                    <p class="text-muted mt-3 mb-0">Guided tours, cultural experiences and travel ideas across Kazakhstan: from the canyons of Charyn to the skyline of Astana.</p>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h2 class="footer-title">Explore</h2>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="tours.html">Tours</a></li>
+                        <li><a href="culture.html">Culture</a></li>
+                        <li><a href="about.html">About us</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h2 class="footer-title">Account</h2>
+                    <ul class="footer-links">
+                        <li><a href="login.html">Log in</a></li>
+                        <li><a href="register.html">Sign up</a></li>
+                        <li><a href="profile.html">My profile</a></li>
+                        <li><a href="contact.html">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <h2 class="footer-title">Our contacts</h2>
+                    <ul class="footer-contact">
+                        <li><i class="bi bi-geo-alt-fill" aria-hidden="true"></i><span>Astana IT University, Astana</span></li>
+                        <li><i class="bi bi-telephone-fill" aria-hidden="true"></i><a href="tel:+77771234567">+7 777 123 4567</a></li>
+                        <li><i class="bi bi-envelope-fill" aria-hidden="true"></i><a href="mailto:info@kaztravel.kz">info@kaztravel.kz</a></li>
+                        <li><i class="bi bi-clock-fill" aria-hidden="true"></i><span>Mon - Fri: 9:00 - 18:00</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">&copy; 2026 Kazakhstan Travel. All rights reserved.</div>
+        </div>
+    </footer>
+    <button type="button" id="back-to-top" class="back-to-top" aria-label="Back to top"><i class="bi bi-chevron-up" aria-hidden="true"></i></button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/favorites.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/destinations.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

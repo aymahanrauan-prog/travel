@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Kazakhstan Travel to book a tour or ask a question">
+    <title>Contacts | Kazakhstan Travel</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8F%94%EF%B8%8F%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/theme.js"></script>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <header class="site-header">
+        <div class="container">
+            <div class="header-top">
+                <a class="brand" href="index.html"><i class="bi bi-compass" aria-hidden="true"></i> Kazakhstan <span>Travel</span></a>
+                <div class="header-actions">
+                    <button type="button" id="theme-toggle" class="btn-outline-brand" aria-pressed="false">Night</button>
+                    <div id="auth-area">
+                        <a href="login.html" class="auth-link">Log in</a>
+                        <a href="register.html" class="btn-brand">Sign up</a>
+                    </div>
+                    <button type="button" class="menu-toggle d-lg-none" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">&#9776;</button>
+                </div>
+            </div>
+            <nav class="navbar navbar-expand-lg p-0" aria-label="Main navigation">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav main-menu">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="destinations.html">Destinations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tours.html">Tours</a></li>
+                    <li class="nav-item"><a class="nav-link" href="culture.html">Culture</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About us</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html" aria-current="page">Contacts</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow-1">
+        <div class="container">
+            <header class="page-header">
+                <h1 class="section-heading">Contact us</h1>
+                <p class="section-intro mb-0">Ask a question or book a tour. We reply within one working day.</p>
+            </header>
+            <div class="row g-4">
+                <aside class="col-12 col-lg-4">
+                    <section class="panel h-100" aria-labelledby="contact-info">
+                        <h2 id="contact-info" class="h4">Contact info</h2>
+                        <ul class="footer-contact mt-3">
+                            <li><i class="bi bi-envelope-fill" aria-hidden="true"></i>
+                                <span class="flex-grow-1"><strong>Email</strong><br><span id="contact-email-text">info@kaztravel.kz</span></span>
+                                <button type="button" id="copy-email-btn" class="btn btn-sm btn-primary" title="Copy email">Copy</button></li>
+                            <li><i class="bi bi-telephone-fill" aria-hidden="true"></i><span><strong>Phone</strong><br>+7 777 123 4567</span></li>
+                            <li><i class="bi bi-geo-alt-fill" aria-hidden="true"></i><span><strong>Address</strong><br>Astana IT University, Astana</span></li>
+                            <li><i class="bi bi-clock-fill" aria-hidden="true"></i><span><strong>Working hours</strong><br>Mon - Fri: 9:00 - 18:00</span></li>
+                        </ul>
+                    </section>
+                </aside>
+
+                <section class="col-12 col-lg-8" aria-labelledby="contact-form-title">
+                    <div class="panel">
+                        <h2 id="contact-form-title" class="h4 mb-4">Send us a message</h2>
+                        <form id="contact-form" novalidate>
+                            <div class="row g-3 mb-3">
+                                <div class="col-12 col-md-6">
+                                    <label for="contact-name" class="form-label">Your name</label>
+                                    <input type="text" class="form-control" id="contact-name" placeholder="Enter your name" autocomplete="name">
+                                    <div class="invalid-feedback" id="contact-name-error"></div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label for="contact-email" class="form-label">Your email</label>
+                                    <input type="text" inputmode="email" class="form-control" id="contact-email" placeholder="name@example.com" autocomplete="email">
+                                    <div class="invalid-feedback" id="contact-email-error"></div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label for="contact-phone" class="form-label">Phone number</label>
+                                    <input type="text" inputmode="tel" class="form-control" id="contact-phone" placeholder="+7 777 123 45 67" autocomplete="tel">
+                                    <div class="invalid-feedback" id="contact-phone-error"></div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label for="contact-tour" class="form-label">Select tour</label>
+                                    <select class="form-select" id="contact-tour">
+                                    <option value="general">General question</option>
+                                    <option value="tour-1">Best of Almaty: City Tour</option>
+                                    <option value="tour-2">Best of Almaty: Mountains</option>
+                                    <option value="tour-3">Charyn Canyon Excursion</option>
+                                    <option value="tour-4">Big Almaty Lake Tour</option>
+                                    <option value="tour-5">Kaindy &amp; Kolsay Lakes</option>
+                                    <option value="tour-6">Altyn-Emel National Park</option>
+                                    <option value="tour-7">Astana: Baiterek &amp; Modern City</option>
+                                    <option value="tour-8">Eagle Hunters Experience</option>
+                                    <option value="tour-9">Dombra &amp; Dastarkhan Evening</option>
+                                    <option value="tour-10">Kokpar &amp; Horse Riding Day</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <fieldset class="mb-3">
+                                <legend class="fs-6 fw-semibold">Preferred contact method</legend>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="contact-method" id="contact-method-email" value="email" checked>
+                                    <label class="form-check-label" for="contact-method-email">Email</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="contact-method" id="contact-method-phone" value="phone">
+                                    <label class="form-check-label" for="contact-method-phone">Phone</label>
+                                </div>
+                            </fieldset>
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="newsletter">
+                                <label class="form-check-label" for="newsletter">Send me travel updates</label>
+                            </div>
+                            <div class="mb-4">
+                                <label for="contact-message" class="form-label">Message</label>
+                                <textarea class="form-control" id="contact-message" rows="5" placeholder="Write your message here..."></textarea>
+                                <div class="invalid-feedback" id="contact-message-error"></div>
+                            </div>
+
+                            <div data-success class="alert alert-success d-none" role="status">Thank you! Your message has been sent. You can see it in your profile.</div>
+                            <div data-form-error class="alert alert-danger d-none" role="alert"></div>
+
+                            <div class="d-grid gap-2 d-sm-flex">
+                                <button type="submit" class="btn btn-primary btn-lg flex-grow-1">
+                                    <span class="spinner-border spinner-border-sm d-none me-2" role="status" aria-hidden="true"></span>
+                                    <span class="btn-text">Send message</span>
+                                </button>
+                                <button type="reset" class="btn btn-outline-primary btn-lg">Clear form</button>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-12 col-lg-4">
+                    <a class="brand" href="index.html"><i class="bi bi-compass" aria-hidden="true"></i> Kazakhstan <span>Travel</span></a>
+                    <p class="text-muted mt-3 mb-0">Guided tours, cultural experiences and travel ideas across Kazakhstan: from the canyons of Charyn to the skyline of Astana.</p>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h2 class="footer-title">Explore</h2>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="destinations.html">Destinations</a></li>
+                        <li><a href="tours.html">Tours</a></li>
+                        <li><a href="culture.html">Culture</a></li>
+                        <li><a href="about.html">About us</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-2">
+                    <h2 class="footer-title">Account</h2>
+                    <ul class="footer-links">
+                        <li><a href="login.html">Log in</a></li>
+                        <li><a href="register.html">Sign up</a></li>
+                        <li><a href="profile.html">My profile</a></li>
+                        <li><a href="contact.html">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <h2 class="footer-title">Our contacts</h2>
+                    <ul class="footer-contact">
+                        <li><i class="bi bi-geo-alt-fill" aria-hidden="true"></i><span>Astana IT University, Astana</span></li>
+                        <li><i class="bi bi-telephone-fill" aria-hidden="true"></i><a href="tel:+77771234567">+7 777 123 4567</a></li>
+                        <li><i class="bi bi-envelope-fill" aria-hidden="true"></i><a href="mailto:info@kaztravel.kz">info@kaztravel.kz</a></li>
+                        <li><i class="bi bi-clock-fill" aria-hidden="true"></i><span>Mon - Fri: 9:00 - 18:00</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">&copy; 2026 Kazakhstan Travel. All rights reserved.</div>
+        </div>
+    </footer>
+    <button type="button" id="back-to-top" class="back-to-top" aria-label="Back to top"><i class="bi bi-chevron-up" aria-hidden="true"></i></button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/favorites.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
